@@ -1,7 +1,35 @@
 @import "settings";
+@import "bottom-bar";
+@import "icon-container";
+@import "window";
+@import "bottom-menu";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 10px;
+}
+body {
+  background-image: url("../img/brick-1920.jpg");
+  position: relative;
+  overflow: hidden;
+}
+.show {
+  display: block;
+}
+.show-bottom-menu {
+  display: flex;
+}
+
+//scrollbar
+::-webkit-scrollbar {
+  width: 2px;
+  background: $bar-color;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(29, 27, 27);
+}
+p,
+input {
+  font-size: $paragraph-size;
 }

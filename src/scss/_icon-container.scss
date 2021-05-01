@@ -1,0 +1,27 @@
+.close-bottom-menu {
+  .icon-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+    width: $icon-container-button-size;
+    button {
+      background-color: transparent;
+      border: none;
+      width: $icon-container-button-size;
+      height: $icon-container-button-size;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      i {
+        color: white;
+        font-size: $icon-container-icon-size;
+        p {
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.bottom-bar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: $bottom-bar-height;
+  background-color: $bar-color;
+  box-shadow: inset 3px 3px 4px #403f96;
+  color: white;
+  &__left {
+    display: flex;
+    button {
+      background-color: transparent;
+      border: none;
+    }
+    i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: $bottom-bar-icons-size;
+      color: white;
+      width: $bottom-bar-button-width;
+      height: $bottom-bar-button-height;
+    }
+    input {
+      font-size: $paragraph-size;
+    }
+  }
+  &__right {
+    display: flex;
+    .date-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      p {
+        text-align: center;
+      }
+    }
+  }
+}

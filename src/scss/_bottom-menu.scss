@@ -1,0 +1,62 @@
+.bottom-menu {
+  position: absolute;
+  bottom: $bottom-bar-height;
+  left: 0;
+  width: $bottom-menu-width;
+  height: $bottom-menu-height;
+  background-color: $bar-color;
+  // padding: 1rem;
+  box-shadow: inset -3px -3px 4px #403f96;
+  display: none;
+  &__settings {
+    width: $bottom-menu-setting-width;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    button {
+      background-color: transparent;
+      border: none;
+      height: $bottom-menu-button-height;
+      i {
+        font-size: 2rem;
+        color: white;
+      }
+    }
+  }
+  &__scroll {
+    width: $bottom-menu-scroll-width;
+    overflow-y: scroll;
+    p {
+      i {
+        font-size: 2rem;
+        padding-right: 1rem;
+      }
+      padding: 0.5rem;
+      color: white;
+    }
+  }
+  &__tiles {
+    width: $bottom-menu-tiles-width;
+    padding: 0.5rem;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax($bottom-menu-tile-width, 1fr)
+    );
+    grid-template-rows: repeat(3, $bottom-menu-tile-height);
+    grid-gap: 1rem;
+    .tile {
+      padding: 1rem;
+      background-color: rgba($color: #000000, $alpha: 0.1);
+      display: inline-block;
+      p {
+        padding: 0.5rem 0;
+        text-align: center;
+        i {
+          font-size: 5rem;
+        }
+      }
+    }
+  }
+}
