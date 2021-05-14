@@ -1,6 +1,6 @@
 .bottom-menu {
   position: absolute;
-  bottom: $bottom-bar-height;
+  bottom: 0;
   left: 0;
   width: $bottom-menu-width;
   height: $bottom-menu-height;
@@ -8,6 +8,7 @@
   // padding: 1rem;
   box-shadow: inset -3px -3px 4px #403f96;
   display: none;
+  z-index: 999999;
   &__settings {
     width: $bottom-menu-setting-width;
     display: flex;
@@ -27,12 +28,21 @@
     width: $bottom-menu-scroll-width;
     overflow-y: scroll;
     p {
+      color: white;
+      padding: 0.5rem;
+    }
+    button {
+      background-color: transparent;
+      border: none;
+      width: 100%;
+      text-align: left;
+      padding: 0.5rem;
+      color: white;
+      font-size: $paragraph-size;
       i {
         font-size: 2rem;
         padding-right: 1rem;
       }
-      padding: 0.5rem;
-      color: white;
     }
   }
   &__tiles {

@@ -3,14 +3,22 @@
 @import "icon-container";
 @import "window";
 @import "bottom-menu";
+@import "calculator";
+@import "myComputer";
+@import "recycle-bin";
+@import "explorer";
+@import "stack";
+@import "portfolio";
+@import "about-me";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 10px;
+  font-family: "Roboto";
+  font-weight: 400;
 }
 body {
-  background-image: url("../img/brick-1920.jpg");
   position: relative;
   overflow: hidden;
 }
@@ -30,6 +38,27 @@ body {
   background: rgb(29, 27, 27);
 }
 p,
-input {
+input,
+i {
+  font-size: $paragraph-size;
+  color: white;
+}
+h3 {
+  font-size: $h3-size;
+  color: white;
+}
+h2 {
+  font-size: $h2-size;
+}
+i {
+  padding: 0.5rem;
+}
+.hiddenMenu {
+  display: none;
+}
+button {
+  background-color: transparent;
+  border: none;
+  color: white;
   font-size: $paragraph-size;
 }

@@ -1,25 +1,88 @@
 .window {
-  width: 400px;
-  height: auto;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 20%;
+  left: 20%;
+  // transform: translate(-50%, -50%);
   border: 1px solid black;
-  background-color: $window-background-color;
+  background-color: $medium-gray;
   display: none;
   &__top-bar {
     height: $window-top-bar-height;
     background-color: $bar-color;
     box-shadow: inset -3px -3px 2px #403f96;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
     cursor: move;
     button {
       width: $window-close-button-width;
     }
+    p {
+      margin: 0.5rem;
+    }
   }
   &__content {
-    padding: 1rem;
+    width: 800px;
+    height: 600px;
+    display: grid;
+    padding: 0;
+    grid-template-columns: 170px auto;
+    grid-template-rows: 35px auto;
+    grid-template-areas:
+      "navigation navigation"
+      "side-bar main-content";
+    background-color: $medium-gray;
+    .navigation {
+      grid-area: navigation;
+      display: flex;
+      justify-content: space-around;
+      background-color: $dark-gray;
+      padding: 0.5rem;
+      &__main {
+        border: 1px solid $border-light-gray;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+        margin: 0 0.5rem;
+        .directory__main {
+          display: flex;
+          align-items: center;
+        }
+        .directory__refresh {
+          display: flex;
+          align-items: center;
+        }
+      }
+      &__search {
+        border: 1px solid $border-light-gray;
+        width: 250px;
+        display: flex;
+        align-items: center;
+        * {
+          padding: 0.5rem;
+        }
+      }
+    }
+    .window__side-bar {
+      grid-area: side-bar;
+      background-color: $dark-gray;
+      li {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 0;
+        .on-hover {
+          opacity: 0;
+          transition: 0.5s;
+        }
+        &:hover > .on-hover {
+          opacity: 1;
+        }
+      }
+      .inside-list {
+        padding-left: 4rem;
+      }
+    }
   }
 }

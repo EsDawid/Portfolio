@@ -15,6 +15,9 @@
       background-color: transparent;
       border: none;
     }
+    button.active {
+      background-color: $bar-active-button;
+    }
     i {
       display: flex;
       justify-content: center;

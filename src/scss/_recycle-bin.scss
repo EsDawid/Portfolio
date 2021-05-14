@@ -1,0 +1,11 @@
+.recycle-bin {
+  &__main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      text-align: center;
+      color: white;
+    }
+  }
+}

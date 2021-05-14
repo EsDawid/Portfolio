@@ -1,0 +1,15 @@
+.stack__container {
+  width: 800px;
+  display: flex;
+  .stack__item {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    i {
+      font-size: 4rem;
+    }
+  }
+}
