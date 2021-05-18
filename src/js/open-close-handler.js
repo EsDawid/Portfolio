@@ -28,6 +28,8 @@ const recycleBinButtons = document.querySelectorAll(".recycle-bin-button");
 recycleBinButtons.forEach((button) => {
   button.addEventListener("click", () => {
     recycleBin.classList.add("show");
+    recycleBin.style.zIndex = zIndex;
+    zIndex++;
     bottomMenu.classList.remove("show-bottom-menu");
     bottomMenuButton.classList.remove("active");
   });
@@ -39,6 +41,8 @@ const myComputerbuttons = document.querySelectorAll(".myComputer-button");
 myComputerbuttons.forEach((button) => {
   button.addEventListener("click", () => {
     myComputer.classList.add("show");
+    myComputer.style.zIndex = zIndex;
+    zIndex++;
     bottomMenu.classList.remove("show-bottom-menu");
     bottomMenuButton.classList.remove("active");
   });
@@ -50,6 +54,8 @@ const portfolioButtons = document.querySelectorAll(".portfolio-button");
 portfolioButtons.forEach((button) => {
   button.addEventListener("click", () => {
     portfolio.classList.add("show");
+    portfolio.style.zIndex = zIndex;
+    zIndex++;
     bottomMenu.classList.remove("show-bottom-menu");
     bottomMenuButton.classList.remove("active");
   });
@@ -61,6 +67,8 @@ const explorerButtons = document.querySelectorAll(".explorer-button");
 explorerButtons.forEach((button) => {
   button.addEventListener("click", () => {
     explorer.classList.add("show");
+    explorer.style.zIndex = zIndex;
+    zIndex++;
     bottomMenu.classList.remove("show-bottom-menu");
     bottomMenuButton.classList.remove("active");
   });
@@ -72,6 +80,8 @@ const aboutMeButtons = document.querySelectorAll(".about-me-button");
 aboutMeButtons.forEach((button) => {
   button.addEventListener("click", () => {
     aboutMe.classList.add("show");
+    aboutMe.style.zIndex = zIndex;
+    zIndex++;
     bottomMenu.classList.remove("show-bottom-menu");
     bottomMenuButton.classList.remove("active");
   });
@@ -83,6 +93,8 @@ const stackButtons = document.querySelectorAll(".stack-button");
 stackButtons.forEach((button) => {
   button.addEventListener("click", () => {
     stack.classList.add("show");
+    stack.style.zIndex = zIndex;
+    zIndex++;
     bottomMenu.classList.remove("show-bottom-menu");
     bottomMenuButton.classList.remove("active");
   });
@@ -94,6 +106,8 @@ const calculator = document.getElementById("calculator");
 calculatorButtons.forEach((button) => {
   button.addEventListener("click", () => {
     calculator.classList.add("show");
+    calculator.style.zIndex = zIndex;
+    zIndex++;
     bottomMenu.classList.remove("show-bottom-menu");
     bottomMenuButton.classList.remove("active");
   });
@@ -105,4 +119,15 @@ windows.forEach((window) => {
     e.target.closest(".window").style.zIndex = zIndex;
     zIndex++;
   });
+});
+
+//Select opener
+const selector = document.getElementById("openSelector");
+selector.addEventListener("change", (e) => {
+  id = selector.value;
+  windowContainer = document.getElementById(id);
+  windowContainer.classList.add("show");
+  bottomMenu.classList.remove("show-bottom-menu");
+  bottomMenuButton.classList.remove("active");
+  selector.value = "none";
 });

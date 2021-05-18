@@ -23,25 +23,25 @@
     <div class="desktop">
       <div class="icon-container">
         <button id="computer-button" class="myComputer-button">
-          <i class="fas fa-desktop"><p>Mój komputer</p></i>
+          <i class="fas fa-desktop"></i><p>Mój komputer</p>
         </button>
         <button id="trash-button" class="recycle-bin-button">
-          <i class="fas fa-trash-alt"><p>Kosz</p></i>
+          <i class="fas fa-trash-alt"></i><p>Kosz</p>
         </button>
         <button id="explorer-button" class="explorer-button">
-          <i class="fab fa-chrome"><p>Przeglądarka</p></i>
+          <i class="fab fa-chrome"></i><p>Przeglądarka</p>
         </button>
         <button id="portfolio-button" class="portfolio-button">
-          <i class="fas fa-folder"><p>Portfolio</p></i>
+          <i class="fas fa-folder"></i><p>Portfolio</p>
         </button>
         <button id="about-me-button" class="about-me-button">
-          <i class="far fa-address-card"><p>O mnie</p></i>
+          <i class="far fa-address-card"></i><p>O mnie</p>
         </button>
         <button id="stack-button" class="stack-button">
-          <i class="fas fa-cubes"><p>Mój stack</p></i>
+          <i class="fas fa-cubes"></i><p>Mój stack</p>
         </button>
         <button id="calculator-button" class="calculator-button">
-          <i class="fas fa-calculator"><p>Kalkulator</p></i>
+          <i class="fas fa-calculator"></i><p>Kalkulator</p>
         </button>
       </div>
     </div>
@@ -50,25 +50,35 @@
         <button id="bottom-menu-button">
           <i class="fab fa-windows"></i>
         </button>
-        <input type="text" />
-        <button>
-          <i class="fas fa-search"></i>
+        <div class="bottom-bar__desktop">  
+          <select id = "openSelector">
+            <option value="none" selected="selected" disabled> </option>
+            <option value="myComputer" class="myComputer-button">Mój komputer</option>
+            <option value="portfolio">Portfolio</option>
+            <option value="recycle-bin">Kosz</option>
+            <option value="stack">Stack</option>
+            <option value="explorer">Przeglądarka</option>
+            <option value="calculator">Kalkulator</option>
+          </select>
+          <button>
+            <i class="fas fa-search"></i>
+          </button>
+          <button class="explorer-button">
+            <i class="fab fa-chrome"></i>
+          </button>
+          <button>
+            <i class="fas fa-envelope"></i>
+          </button>
+          <button>
+            <i class="fas fa-shopping-bag"></i>
+          </button>
+          <button class="calculator-button">
+            <i class="fas fa-calculator"></i>
+          </button>
+          <button>
+            <i class="fas fa-file-word"></i>
         </button>
-        <button>
-          <i class="fab fa-chrome"></i>
-        </button>
-        <button>
-          <i class="fas fa-envelope"></i>
-        </button>
-        <button>
-          <i class="fas fa-shopping-bag"></i>
-        </button>
-        <button class="calculator-button">
-          <i class="fas fa-calculator"></i>
-        </button>
-        <button>
-          <i class="fas fa-file-word"></i>
-        </button>
+        </div>
       </div>
       <div class="bottom-bar__right">
         <div class="date-container">
@@ -146,26 +156,26 @@
           <p class="result-container__result"></p>
         </div>
         <div class="calculator-buttons">
-          <button class="num clear-number"><p>CE</p></button>
+          <button class="num clear-number">CE</button>
           <button class="num curr"><p>C</p></button>
           <button class="num curr"><i class="fas fa-backspace"></i></button>
-          <button class="num curr operation"><p>/</p></button>
-          <button class="number num curr"><p>7</p></button>
-          <button class="number num curr"><p>8</p></button>
-          <button class="number num curr"><p>9</p></button>
-          <button class="num curr operation"><p>*</p></button>
-          <button class="number num curr"><p>4</p></button>
-          <button class="number num curr"><p>5</p></button>
-          <button class="number num curr"><p>6</p></button>
-          <button class="num curr operation"><p>-</p></button>
-          <button class="number num curr"><p>1</p></button>
-          <button class="number num curr"><p>2</p></button>
-          <button class="number num curr"><p>3</p></button>
-          <button class="num curr operation add"><p>+</p></button>
-          <button class="num curr"><p>+/-</p></button>
-          <button class="number num curr"><p>0</p></button>
-          <button class="num curr"><p>,</p></button>
-          <button class="result-button curr"><p>=</p></button>
+          <button class="num curr operation">/</button>
+          <button class="number num curr">7</button>
+          <button class="number num curr">8</button>
+          <button class="number num curr">9</button>
+          <button class="num curr operation">*</button>
+          <button class="number num curr">4</button>
+          <button class="number num curr">5</button>
+          <button class="number num curr">6</button>
+          <button class="num curr operation">-</button>
+          <button class="number num curr">1></button>
+          <button class="number num curr">2</button>
+          <button class="number num curr">3</button>
+          <button class="num curr operation add">+</button>
+          <button class="num curr">+/-</button>
+          <button class="number num curr">0</button>
+          <button class="num curr">,</button>
+          <button class="result-button curr">=</button>
         </div>
       </div>
     </div>
@@ -199,40 +209,52 @@
             <button><i class="far fa-search"></i></button>
             <p>Przeszukaj: ten komputer</p>
           </div>
-        </div>
-        <div class="window__side-bar">
+          <div class="navigation--opener">
+            <p>Nawigacja</p>
+            <button class="side-bar-opener"><i class="fas fa-chevron-down"></i></button>
+          </div>
+        </div>        
+        <div class="window__side-bar hiddenMenu side-bar-navigation">
           <ul>
             <li>
-              <button class="on-hover button-side-bar"><i class="fas fa-chevron-right"></i></button>
-              <i class="fas fa-fighter-jet"></i><p>Szybki dostęp</p>
-            </li>            
-            <ul class="inside-list quick-access-list hiddenMenu">
-              <li><p>Pulpit</p></li>
-              <li><p>Pobrane</p></li>
-              <li><p>Dokumenty</p></li>
-              <li><p>Obrazy</p></li>
-            </ul>
-            <li>
-              <button class="on-hover"><i class="fas fa-chevron-right"></i></button>
-              <i class="far fa-hdd"></i><p>OneDrive</p>
+              <div class="side-bar-navigation__button-container">
+                <button class="on-hover button-side-bar"><i class="fas fa-chevron-right"></i></button>
+                <i class="fas fa-fighter-jet"></i><p>Szybki dostęp</p>
+              </div>
+              <ul class="inside-list quick-access-list hiddenMenu">
+                <li><p>Pulpit</p></li>
+                <li><p>Pobrane</p></li>
+                <li><p>Dokumenty</p></li>
+                <li><p>Obrazy</p></li>
+              </ul>
             </li>
             <li>
-              <button class="on-hover button-side-bar"><i class="fas fa-chevron-right"></i></button>
-              <i class="fas fa-desktop"></i><p>Ten Komputer</p>
-            </li>            
-            <ul class="inside-list my-computer-list hiddenMenu">
-              <li><p>Pulpit</p></li>
-              <li><p>Pobrane</p></li>
-              <li><p>Dokumenty</p></li>
-              <li><p>Obrazy</p></li>
-            </ul>
+              <div class="side-bar-navigation__button-container">
+                <button class="on-hover"><i class="fas fa-chevron-right"></i></button>
+                <i class="far fa-hdd"></i><p>OneDrive</p>
+              </div>
+            </li>
             <li>
-              <button class="on-hover"><i class="fas fa-chevron-right"></i></button>
-              <i class="fas fa-network-wired"></i><p>Sieć</p>
+              <div class="side-bar-navigation__button-container">
+                <button class="on-hover button-side-bar"><i class="fas fa-chevron-right"></i></button>
+                <i class="fas fa-desktop"></i><p>Ten Komputer</p>
+              </div>                        
+              <ul class="inside-list my-computer-list hiddenMenu">
+                <li><p>Pulpit</p></li>
+                <li><p>Pobrane</p></li>
+                <li><p>Dokumenty</p></li>
+                <li><p>Obrazy</p></li>
+              </ul>
+            </li>
+            <li>
+              <div class="side-bar-navigation__button-container">
+                <button class="on-hover"><i class="fas fa-chevron-right"></i></button>
+                <i class="fas fa-network-wired"></i><p>Sieć</p>
+              </div>
             </li>
           </ul>
         </div>
-        <div class="myComputer__main-content">
+        <div class="myComputer__main-content scroll-content" id="scroll">
           <h3 class="main-content__title">Foldery</h3>
           <div class="myComputer__folders-container folders-container">
             <div class="folders-container__folder">
@@ -305,7 +327,7 @@
             <div class="directory__main">
               <button><i class="fas fa-desktop"></i></button>
               <button><i class="fas fa-chevron-right"></i></button>
-              <p>Ten komputer</p>
+              <p>Kosz</p>
             </div>
             <div class="directory__refresh">
               <button><i class="fas fa-chevron-down"></i></button>
@@ -314,46 +336,50 @@
           </div>
           <div class="navigation__search">
             <button><i class="far fa-search"></i></button>
-            <p>Przeszukaj: ten komputer</p>
+            <p>Przeszukaj: ten kosz</p>
+          </div>
+          <div class="navigation--opener">
+            <p>Nawigacja</p>
+            <button class="side-bar-opener"><i class="fas fa-chevron-down"></i></button>
           </div>
         </div>
-        <div class="window__side-bar">
+        <div class="window__side-bar hiddenMenu side-bar-navigation">
           <ul>
             <li>
-              <button class="on-hover button-side-bar">
-                <i class="fas fa-chevron-right"></i>
-              </button>
-              <i class="fas fa-fighter-jet"></i>
-              <p>Szybki dostęp</p>
-            </li>
-            <ul class="inside-list quick-access-list hiddenMenu">
-              <li><p>Pulpit</p></li>
-              <li><p>Pobrane</p></li>
-              <li><p>Dokumenty</p></li>
-              <li><p>Obrazy</p></li>
-            </ul>
-            <li>
-              <button class="on-hover"><i class="fas fa-chevron-right"></i></button>
-              <i class="far fa-hdd"></i>
-              <p>OneDrive</p>
+              <div class="side-bar-navigation__button-container">
+                <button class="on-hover button-side-bar"><i class="fas fa-chevron-right"></i></button>
+                <i class="fas fa-fighter-jet"></i><p>Szybki dostęp</p>
+              </div>
+              <ul class="inside-list quick-access-list hiddenMenu">
+                <li><p>Pulpit</p></li>
+                <li><p>Pobrane</p></li>
+                <li><p>Dokumenty</p></li>
+                <li><p>Obrazy</p></li>
+              </ul>
             </li>
             <li>
-              <button class="on-hover button-side-bar">
-                <i class="fas fa-chevron-right"></i>
-              </button>
-              <i class="fas fa-desktop"></i>
-              <p>Ten Komputer</p>
+              <div class="side-bar-navigation__button-container">
+                <button class="on-hover"><i class="fas fa-chevron-right"></i></button>
+                <i class="far fa-hdd"></i><p>OneDrive</p>
+              </div>
             </li>
-            <ul class="inside-list my-computer-list hiddenMenu">
-              <li><p>Pulpit</p></li>
-              <li><p>Pobrane</p></li>
-              <li><p>Dokumenty</p></li>
-              <li><p>Obrazy</p></li>
-            </ul>
             <li>
-              <button class="on-hover"><i class="fas fa-chevron-right"></i></button>
-              <i class="fas fa-network-wired"></i>
-              <p>Sieć</p>
+              <div class="side-bar-navigation__button-container">
+                <button class="on-hover button-side-bar"><i class="fas fa-chevron-right"></i></button>
+                <i class="fas fa-desktop"></i><p>Ten Komputer</p>
+              </div>                        
+              <ul class="inside-list my-computer-list hiddenMenu">
+                <li><p>Pulpit</p></li>
+                <li><p>Pobrane</p></li>
+                <li><p>Dokumenty</p></li>
+                <li><p>Obrazy</p></li>
+              </ul>
+            </li>
+            <li>
+              <div class="side-bar-navigation__button-container">
+                <button class="on-hover"><i class="fas fa-chevron-right"></i></button>
+                <i class="fas fa-network-wired"></i><p>Sieć</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -371,7 +397,7 @@
       </div>
       <div class="explorer__content">
         <h2>Brak połączenia z internetem</h2>
-        <p>1. Spróbuj ponownie połączyć się z internetem</p>
+        <p>1. Spróbuj ponownie polaczyć się z internetem</p>
         <p>2. Wyjmij i włóż kabel od internetu</p>
         <p>3. Wyłącz i włącz komputer</p>
       </div>
@@ -384,7 +410,15 @@
         <button class="closeWindow">X</button>
       </div>        
       <div class="about-me__content">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, velit placeat sunt voluptatem accusantium at officiis labore beatae exercitationem excepturi nisi molestiae harum voluptas, necessitatibus odit. Sint totam consequatur asperiores id eligendi ducimus pariatur sapiente aspernatur, adipisci nam ullam commodi dolores dolorum nihil modi aut dicta odit numquam! Magnam laudantium ab nam nesciunt architecto quod quae repellat pariatur non expedita ad sed cupiditate explicabo voluptate ea recusandae assumenda sit maiores est, quam soluta quia dolor qui provident! Corporis, earum, cumque eaque optio eum maiores illo debitis similique animi in illum minus nisi magnam adipisci. Deserunt molestias eum sunt nam odio!</p>
+        <h2>Cześć. Jestem Dawid</h2>
+        <h3>Jestem początkującym programistą</h3>
+        <p>Posiadam kilka miesięcy doświadczenia komercyjnego</p>
+        <p>Ukończyłem studia inżynierskie na kierunku mechanika i budowa maszyn, a obecnie jestem na ostatniej prostej do obrony pracy magisterskiej na kierunku zarządzanie i inżynieria produkcji ze specjalnością technologie cyfrowe w zarządzaniu produkcją</p>
+        <p>Programowaniem interesuje się od prawie 2 lat</p>
+        <p>Uczestniczyłem w kursie CodersCamp dotyczącym front-endu. Pracowaliśmy w grupach 5 osobowych wraz z mentorem tworząc wspólnie aplikacje/strony internetowe w danej technologii.
+        </p>
+        <p>Jednym z projektów jest "ZbiorKom" napisany w czystym javascript. Aplikacja, która pozostała przez nas napisana pokazuje aktualne linie oraz rozkład jazdy danego przystanku w Warszawie. Na mapie pokazywane są również aktualnie kursujące pojazdy danej linii. Wszystkie dane pobierane są z API udostępnionego przez UM Warszawa.
+        </p>
       </div>
     </div>
 
@@ -406,7 +440,7 @@
             <div class="directory__main">
               <button><i class="fas fa-desktop"></i></button>
               <button><i class="fas fa-chevron-right"></i></button>
-              <p>Ten komputer</p>
+              <p>Portfolio</p>
             </div>
             <div class="directory__refresh">
               <button><i class="fas fa-chevron-down"></i></button>
@@ -415,75 +449,66 @@
           </div>
           <div class="navigation__search">
             <button><i class="far fa-search"></i></button>
-            <p>Przeszukaj: ten komputer</p>
+            <p>Przeszukaj: portfolio</p>
+          </div>
+          <div class="navigation--opener">
+            <p>Nawigacja</p>
+            <button><i class="fas fa-chevron-down"></i></button>
           </div>
         </div>
-        <div class="window__side-bar">
+        <div class="window__side-bar hiddenMenu side-bar-navigation">
           <ul>
             <li>
-              <button class="on-hover button-side-bar">
-                <i class="fas fa-chevron-right"></i>
-              </button>
-              <i class="fas fa-fighter-jet"></i>
-              <p>Szybki dostęp</p>
-            </li>
-            <ul class="inside-list quick-access-list hiddenMenu">
-              <li><p>Pulpit</p></li>
-              <li><p>Pobrane</p></li>
-              <li><p>Dokumenty</p></li>
-              <li><p>Obrazy</p></li>
-            </ul>
-            <li>
-              <button class="on-hover"><i class="fas fa-chevron-right"></i></button>
-              <i class="far fa-hdd"></i>
-              <p>OneDrive</p>
+              <div class="side-bar-navigation__button-container">
+                <button class="on-hover button-side-bar"><i class="fas fa-chevron-right"></i></button>
+                <i class="fas fa-fighter-jet"></i><p>Szybki dostęp</p>
+              </div>
+              <ul class="inside-list quick-access-list hiddenMenu">
+                <li><p>Pulpit</p></li>
+                <li><p>Pobrane</p></li>
+                <li><p>Dokumenty</p></li>
+                <li><p>Obrazy</p></li>
+              </ul>
             </li>
             <li>
-              <button class="on-hover button-side-bar">
-                <i class="fas fa-chevron-right"></i>
-              </button>
-              <i class="fas fa-desktop"></i>
-              <p>Ten Komputer</p>
+              <div class="side-bar-navigation__button-container">
+                <button class="on-hover"><i class="fas fa-chevron-right"></i></button>
+                <i class="far fa-hdd"></i><p>OneDrive</p>
+              </div>
             </li>
-            <ul class="inside-list my-computer-list hiddenMenu">
-              <li><p>Pulpit</p></li>
-              <li><p>Pobrane</p></li>
-              <li><p>Dokumenty</p></li>
-              <li><p>Obrazy</p></li>
-            </ul>
             <li>
-              <button class="on-hover"><i class="fas fa-chevron-right"></i></button>
-              <i class="fas fa-network-wired"></i>
-              <p>Sieć</p>
+              <div class="side-bar-navigation__button-container">
+                <button class="on-hover button-side-bar"><i class="fas fa-chevron-right"></i></button>
+                <i class="fas fa-desktop"></i><p>Ten Komputer</p>
+              </div>                        
+              <ul class="inside-list my-computer-list hiddenMenu">
+                <li><p>Pulpit</p></li>
+                <li><p>Pobrane</p></li>
+                <li><p>Dokumenty</p></li>
+                <li><p>Obrazy</p></li>
+              </ul>
+            </li>
+            <li>
+              <div class="side-bar-navigation__button-container">
+                <button class="on-hover"><i class="fas fa-chevron-right"></i></button>
+                <i class="fas fa-network-wired"></i><p>Sieć</p>
+              </div>
             </li>
           </ul>
         </div>
-        <div class="portfolio__main-content">
+        <div class="portfolio__main-content scroll-content">
           <h3 class="portfolio__title">Projekty</h3>
           <div class="portfolio__container">
             <div class="portfolio__project">
-              <img src="img/projekt.jpg" alt="">
-              <p>Projekt 1</p>
-            </div>
-            <div class="portfolio__project">
-              <img src="img/projekt.jpg" alt="">
-              <p>Projekt 2</p>
-            </div>
-            <div class="portfolio__project">
-              <img src="img/projekt.jpg" alt="">
-              <p>Projekt 3</p>
-            </div>
-            <div class="portfolio__project">
-              <img src="img/projekt.jpg" alt="">
-              <p>Projekt 4</p>
-            </div>
-            <div class="portfolio__project">
-              <img src="img/projekt.jpg" alt="">
-              <p>Projekt 5</p>
+              <a href="https://github.com/EsDawid/CodersCamp2020_WarszawskiZbiorKom"><img src="img/ZbiorKom.png" alt=""></a>              
+              <p>Warszawski Zbiorkom
+                (zmieniono API)
+              </p>
             </div>
           </div>
         </div>
       </div>
+      
     </div>
     
     <!-- Mój stack -->
@@ -494,32 +519,44 @@
       </div>
       <div class="stack__container"> 
         <div class="stack__item">
-          <i class="fab fa-html5"></i>
+          <img src="/img/icons8-html-5-96.png" alt="">
           <p>HTML</p>
         </div>
         <div class="stack__item">
-          <i class="fab fa-css3-alt"></i>
+          <img src="/img/icons8-css3-96.png" alt="">
           <p>CSS</p>
         </div>
         <div class="stack__item">
-          <i class="fab fa-css3-alt"></i>
+          <img src="/img/icons8-javascript-96.png" alt="">
+          <p>JS</p>
+        </div>
+        <div class="stack__item">
+          <img src="/img/icons8-english-mustache-100.png" alt="">
           <p>Handlebars</p>
         </div>
         <div class="stack__item">
-          <i class="fab fa-css3-alt"></i>
+          <img src="/img/icons8-gulp-96.png" alt="">
           <p>Gulp</p>
         </div>
         <div class="stack__item">
-          <i class="fab fa-css3-alt"></i>
+          <img src="/img/icons8-jira-96.png" alt="">
           <p>Jira</p>
         </div>
         <div class="stack__item">
-          <i class="fab fa-css3-alt"></i>
+          <img src="/img/foundation.png" alt="">
           <p>Foundation</p>
         </div>
         <div class="stack__item">
-          <i class="fab fa-css3-alt"></i>
+          <img src="/img/icons8-confluence-96.png" alt="">
           <p>Confluence</p>
+        </div>
+        <div class="stack__item">
+          <img src="/img/icons8-github-100.png" alt="">
+          <p>Github</p>
+        </div>
+        <div class="stack__item">
+          <img src="/img/icons8-turtle-200.png" alt="">
+          <p>SVN</p>
         </div>
         
       </div>
@@ -527,7 +564,9 @@
 
     <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
     <!-- build:js -->
+    
     <script src="js/script.js"></script>
+
     <!-- endbuild -->
   </body>
 </html>

@@ -11,6 +11,18 @@
   color: white;
   &__left {
     display: flex;
+    .bottom-bar__desktop {
+      display: none;
+      @media (min-width: 768px) {
+        display: flex;
+      }
+    }
+    select {
+      width: 200px;
+    }
+    input {
+      color: black;
+    }
     button {
       background-color: transparent;
       border: none;

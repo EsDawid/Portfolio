@@ -1,4 +1,8 @@
 #calculator {
+  width: auto;
+  height: auto;
+  @media (orientation: landscape) {
+  }
   .calculator__content {
     padding: 0;
     .result-container {
@@ -23,9 +27,14 @@
     }
     .calculator-buttons {
       display: grid;
-      height: 300px;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(5, 1fr);
+      grid-template-columns: repeat(4, minmax(30px, 1fr));
+      grid-template-rows: repeat(5, 60px);
+      @media (orientation: landscape) {
+        grid-template-rows: repeat(5, 35px);
+      }
+      @media (orientation: landscape) and (min-width: 768px) {
+        grid-template-rows: repeat(5, 60px);
+      }
       button {
         color: white;
         background-color: $medium-gray;

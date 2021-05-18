@@ -1,16 +1,12 @@
 .my-computer {
-  .window__content {
-    button {
-      background-color: transparent;
-      border: none;
-    }
-  }
-
   .myComputer__main-content {
+    grid-area: main-content;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem;
+    overflow-y: scroll;
+    height: auto;
     .main-content__title {
       height: 30px;
     }
@@ -23,17 +19,23 @@
     }
     .folders-container__folder,
     .discs-container__disc {
-      min-width: 33%;
-      min-height: 100px;
+      width: 33%;
+      min-height: 70px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      @media (min-width: 600px) {
+        width: 25%;
+      }
+      p {
+        text-align: center;
+      }
       * {
         padding: 0.5rem;
       }
       i {
-        font-size: 4rem;
+        font-size: 3rem;
       }
     }
   }

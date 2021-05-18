@@ -14,15 +14,16 @@
       width: $icon-container-button-size;
       height: $icon-container-button-size;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       padding: 1rem;
       i {
         color: white;
         font-size: $icon-container-icon-size;
-        p {
-          padding: 0.5rem;
-        }
+      }
+      p {
+        padding: 0.5rem;
       }
     }
   }

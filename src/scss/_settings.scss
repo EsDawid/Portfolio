@@ -5,11 +5,15 @@ $bottom-bar-button-width: 6rem;
 $bottom-bar-icons-size: 2rem;
 
 // Bottom menu
-$bottom-menu-width: 660px;
+$bottom-menu-width: 320px;
+$bottom-menu-width--mobile: 500px;
 $bottom-menu-height: 500px;
+$bottom-menu-height--mobile: 280px;
 $bottom-menu-setting-width: 60px;
-$bottom-menu-scroll-width: 220px;
-$bottom-menu-tiles-width: 380px;
+$bottom-menu-scroll-width: 130px;
+$bottom-menu-scroll-width--mobile: 260px;
+$bottom-menu-tiles-width: 130px;
+$bottom-menu-tiles-width--mobile: 180px;
 $bottom-menu-tile-width: 100px;
 $bottom-menu-tile-height: 120px;
 $bottom-menu-button-height: 50px;
